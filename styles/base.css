@@ -1,0 +1,96 @@
+body {
+  font-family: Muli;
+  color: #05386b;
+  padding: 10px;
+  background-color: #5cdb95;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.entete {
+  padding: 30px;
+  text-align: center;
+  background-color: #379683;
+}
+
+.entete h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.navigation {
+  overflow: hidden;
+  background-color: #05386b;
+}
+
+.navigation a {
+  float: left;
+  display: block;
+  color: #edf5e1;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: #edf5e1;
+  color: #05386b;
+}
+
+.coloneGauche {
+  float: left;
+  width: 75%;
+}
+
+.coloneDroite {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+.fakeimg {
+  background-color: #05386b;
+  width: 100%;
+  padding: 20px;
+}
+
+.imageCarte {
+  width: 100%;
+  padding: 20px;
+  box-shadow: 5px 0px 15px 0px #000000;
+}
+
+.carte {
+  background-color: #edf5e1;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.rangee:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #edf5e1;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .coloneGauche,
+  .coloneDroite {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navigation a {
+    float: none;
+    width: 100%;
+  }
+}
