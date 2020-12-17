@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
 body {
   font-family: Muli;
   font-size: 16px;
@@ -58,12 +60,6 @@ body {
   padding-left: 20px;
 }
 
-.fakeimg {
-  background-color: #05386b;
-  width: 100%;
-  padding: 20px;
-}
-
 .imageCarte {
   width: 100%;
   padding: 20px;
@@ -105,10 +101,35 @@ body {
   }
 }
 
-.imgPartenaire {
+#partenaires .imgPartenaire {
   margin: 20px;
+}
+
+#partenaires {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#nuagixPartenaire {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
 }
 
 #menuAccordeon {
   font-size: 15px;
+}
+
+.imageEmployee {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.mini {
+  margin: 10px;
+}
+
+.paragraphePresident {
+  /*display: none;*/
 }
