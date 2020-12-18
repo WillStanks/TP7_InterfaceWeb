@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XPLUS - Nous Contacter</title>
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="styles/base.css" />
+  </head>
+  <body>
+    <div class="entete">
+      <a href="index.html"
+        ><img src="images/logoCompagnie.svg" width="200px"
+      /></a>
+      <h3>Compagnie de jeux vidéos Québécoises !</h3>
+    </div>
+    <div class="navigation">
+      <a href="index.html">Accueil</a>
+      <a href="studios.html">Nos Studios</a>
+      <a href="carriere.html">Carrières</a>
+      <a href="contacter.html">Nous Contacter</a>
+    </div>
+    <div class="carte">
+      <h1>Nous Contacter</h1>
+      <input type="text" placeholder="Entrer votre nom" id="nom" />
+      <br /><br />
+      <input type="text" placeholder="Entrer votre prenom" id="prenom" />
+      <br /><br />
+      <input type="radio" id="homme" name="genre" value="homme" /> Homme
+      <input type="radio" id="femme" name="genre" value="femme" /> Femme
+      <br /><br />
+      <input type="email" placeholder="Entrer votre email" id="email" />
+      <br />
+      <br />
+         
+      <select id="pays">
+        <option disabled selected value>-- sélectionner votre pays --</option>
+        <option value="Canada">Canada</option>
+        <option value="EtatsUnis">États-Unis</option>
+        <option value="France">France</option>
+      </select>
+      <br /><br />
+      <input type="checkbox" id="infoLettres" />Envoyez moi des info-lettres
+      mensuellement <br /><br />
+      <span>Quel est votre question ?</span>
+      <br />
+      <textarea id="question" rows="4"></textarea>
+      <br /><br /><br />
+
+      <div class="container">
+        <button id="boutonEnvoyer"></button>
+      </div>
+    </div>
+    <div class="footer">
+      <a href="index.html"
+        ><img src="images/logoCompagnie.svg" width="200px"
+      /></a>
+      <p>Site web créer par William Stancu</p>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+  <script src="index.js"></script>
+</html>

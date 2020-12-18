@@ -1,5 +1,9 @@
+/* Importer des polices et themes de css. */
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css");
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
 
+/* Css sur tout le body */
 body {
   font-family: Muli;
   font-size: 16px;
@@ -8,33 +12,50 @@ body {
   background-color: #5cdb95;
 }
 
+/* Permet de séparer tout les div en boite séparé. Puis, met le font-family a tout les pages. */
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
+/* Enleve les puces de la liste de langages. */
+#langages {
+  list-style-type: none;
+}
+
+/* Aligne toutes les images au centre. */
 .img {
   text-align: center;
 }
 
-.footer {
-  font-size: 12px;
+/* Donne un effet d'ombrage aux images dans les cartes. */
+.imageCarte {
+  width: 100%;
+  padding: 20px;
+  -webkit-box-shadow: 5px 0px 15px 0px #000000;
+  box-shadow: 5px 0px 15px 0px #000000;
 }
 
+/* Css pour l'entete. */
 .entete {
   padding: 30px;
   text-align: center;
   background-color: #379683;
 }
 
+/* Css pour le titre de l'entete. */
 .entete h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+/* Css pour le menu de navigation. */
 .navigation {
   overflow: hidden;
   background-color: #05386b;
 }
 
+/* Css pour les liens dans le menu de navigation. */
 .navigation a {
   float: left;
   display: block;
@@ -44,28 +65,26 @@ body {
   text-decoration: none;
 }
 
+/* Lorsqu'on survole un lien dans le menu navigation. */
 .navigation a:hover {
   background-color: #edf5e1;
   color: #05386b;
 }
 
+/* Css pour la colone gauche */
 .coloneGauche {
   float: left;
   width: 75%;
 }
 
+/* Css pour la colone droite. */
 .coloneDroite {
   float: left;
   width: 25%;
   padding-left: 20px;
 }
 
-.imageCarte {
-  width: 100%;
-  padding: 20px;
-  box-shadow: 5px 0px 15px 0px #000000;
-}
-
+/* Css pour toutes les cartes. */
 .carte {
   background-color: #edf5e1;
   padding: 20px;
@@ -73,19 +92,23 @@ body {
   text-align: center;
 }
 
+/* Permet de séparer les ranger en tableau. */
 .rangee:after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* Css pour le pied de page. */
 .footer {
   padding: 20px;
   text-align: center;
   background: #edf5e1;
   margin-top: 20px;
+  font-size: 12px;
 }
 
+/* Permet d'ajuster les colones gauches et droites lorqu'on rétrécit la page. */
 @media screen and (max-width: 800px) {
   .coloneGauche,
   .coloneDroite {
@@ -94,42 +117,156 @@ body {
   }
 }
 
-@media screen and (max-width: 400px) {
-  .navigation a {
-    float: none;
-    width: 100%;
-  }
-}
-
+/* Permet de mettre une marge entre les images des partenaires. */
 #partenaires .imgPartenaire {
   margin: 20px;
 }
 
+/* Permet de bien ajuster tout les icones de partenaires. */
 #partenaires {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
+/* Css pour le logo nuagix qui est un text. */
 #nuagixPartenaire {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
 }
 
+/* Css du menu Accordeon. */
 #menuAccordeon {
   font-size: 15px;
 }
 
+/* Permet d'ajuster les images des employee dans la gallerie d'images. */
 .imageEmployee {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
+/* Met une marge entre les petites images de la gallerie. */
 .mini {
   margin: 10px;
 }
 
-.paragraphePresident {
-  /*display: none;*/
+/*----------BOUTON VALIDER----------*/
+
+/* Css pour le conteneur du bouton. */
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -65px;
+  margin-top: -20px;
+  width: 130px;
+  height: 40px;
+  text-align: center;
+}
+
+/* Css pour le bouton. */
+button {
+  outline: none;
+  height: 40px;
+  text-align: center;
+  width: 130px;
+  border-radius: 40px;
+  background: #edf5e1;
+  border: 2px solid #5cdb95;
+  color: #5cdb95;
+  letter-spacing: 1px;
+  text-shadow: 0;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+/* Lorsqu'on survole le bouton. */
+button:hover {
+  color: #edf5e1;
+  background: #5cdb95;
+}
+
+/* Lorsque le bouton est actif les lettres s'espaces. */
+button:active {
+  letter-spacing: 2px;
+}
+
+/* Permet de mettre le contenu ENVOYER dans le bouton. */
+button:after {
+  content: "ENVOYER";
+}
+
+/* Css de la classe onclic qui apparait lorsque on click sur le bouton. */
+.onclic {
+  width: 40px;
+  border-color: #05386b;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #5cdb95;
+  -webkit-animation: rotating 2s 0.25s linear infinite;
+  animation: rotating 2s 0.25s linear infinite;
+}
+
+/* Enleve le contenu ENVOYER lorsqu'on clique sur le bouton. */
+.onclic:after {
+  content: "";
+}
+
+/* Css du bouton ACTIVER lorsqu'on le survole  */
+.onclic:hover {
+  color: #5cdb95;
+  background: #edf5e1;
+}
+
+/* Css de la classe valider qui est appeler lorsque l'animation est fini. */
+.valider {
+  font-size: 13px;
+  color: #edf5e1;
+  background: #5cdb95;
+}
+
+/* Permet de mettre le petit crochet pour montrer que c'est valider. */
+.valider:after {
+  font-family: "FontAwesome";
+  content: "\f00c";
+}
+
+/* Css de l'animation du bouton. De 0 degré a 360 degré.*/
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
