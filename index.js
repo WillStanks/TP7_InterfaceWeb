@@ -86,6 +86,7 @@ function gallerie(){
 
 /*--------------------FORMULAIRE NOUS CONTACTER--------------------*/
 
+/*-----Bouton envoyer-----*/
 /**
  * Fonction qui permet au bouton envoyer de faire son animation.
  */
@@ -115,3 +116,21 @@ $(function() {
       }, 1250 );
     }
   });
+
+/*-----Bouton effacer-----*/
+
+/**
+ * Fonction qui permet de supprimer tous les champs du formulaire.
+ */
+$(function(){
+  $(".boutonCouleur").click(function(){
+    document.getElementById('nom').value = '';
+    document.getElementById('prenom').value = '';
+    $('input[name=genre]').attr('checked',false);
+    document.getElementById('email').value = '';
+    $('#pays').val('default');
+    $('input[id=infoLettres]').attr('checked',false);
+    document.getElementById('question').value = '';
+    
+  });
+});
